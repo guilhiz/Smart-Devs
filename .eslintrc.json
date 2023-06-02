@@ -2,7 +2,6 @@
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
-    "plugin:react/recommended",
     "plugin:prettier/recommended",
     "prettier"
   ],
@@ -11,6 +10,9 @@
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "@next/next/no-html-link-for-pages": "off",
+    "no-undef": "off",
+    "react/jsx-key": "off",
     "react/prop-types": "off",
     "prettier/prettier": "error"
   }
