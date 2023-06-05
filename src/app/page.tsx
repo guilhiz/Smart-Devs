@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { GithubLogo, GoogleLogo } from '@phosphor-icons/react';
+import { signIn } from 'next-auth/react';
 
 const SignIn = () => {
   return (
@@ -11,7 +12,7 @@ const SignIn = () => {
         <label className="label">
           <span className="label-text text-xl font-medium">Email</span>
         </label>
-        <input type="text" placeholder="Digete seu email" className="input input-bordered w-full " />
+        <input type="text" placeholder="Digite seu email" className="input input-bordered w-full " />
         <label className="label">
           <span className="label-text-alt text-error text-base">No mínimo 5 caracteres</span>
         </label>
@@ -32,7 +33,7 @@ const SignIn = () => {
       </p>
       <div className="divider">Ou continuar com</div>
       <div className="flex w-full max-w-md justify-around">
-        <button className="btn btn-neutral  w-5/12">
+        <button onClick={() => signIn('github')} className="btn btn-neutral  w-5/12">
           <GithubLogo size={22} color="#cccccc" /> Github
         </button>
         <button className="btn btn-neutral w-5/12">

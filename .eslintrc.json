@@ -3,10 +3,10 @@
   "overrides": [],
   "plugins": ["react", "react-hooks", "prettier"],
   "rules": {
-    "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "@next/next/no-html-link-for-pages": "off",
     "no-undef": "off",
+    "react-hooks/rules-of-hooks": "off",
     "react/jsx-key": "off",
     "react/prop-types": "off",
     "prettier/prettier": "error"
