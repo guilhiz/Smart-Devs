@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { loginIsRequiredServer } from '../../lib/auth';
+import { loginIsRequiredServer } from '../../../lib/auth';
 
 const SignUp = async () => {
   await loginIsRequiredServer();
@@ -34,7 +34,7 @@ const SignUp = async () => {
       </form>
       <p className="mt-2 text-base">
         Já tem uma conta?
-        <Link href="/" className="link text-info hover:text-opacity-75 ml-2">
+        <Link href="/auth/login" className="link text-info hover:text-opacity-75 ml-2">
           Faça login aqui.
         </Link>
       </p>

@@ -1,3 +1,5 @@
+import Header from '../components/Header';
+
 import '../styles/globals.css';
 
 import { Barlow } from 'next/font/google';
@@ -14,6 +16,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${barlow.className} bg-base-100 flex flex-col antialiased`}>
+        {/* @ts-expect-error Server Component */}
+        <Header />
         <main className="grow min-h-screen xl:container">{children}</main>
       </body>
     </html>
