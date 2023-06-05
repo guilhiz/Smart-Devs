@@ -45,5 +45,5 @@ export const authConfig: NextAuthOptions = {
 export const loginIsRequiredServer = async () => {
   const session = await getServerSession(authConfig);
 
-  if (!session) return redirect('/');
+  if (!session) return redirect('/auth/login');
 };
