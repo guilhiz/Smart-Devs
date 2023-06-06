@@ -8,7 +8,7 @@ import SearchForm from '../ui/SearchForm';
 const Header = async () => {
   const session = await getServerSession(authConfig);
   return (
-    <header className="navbar bg-base-100 px-8 fixed top-0 left-0">
+    <header className="navbar bg-base-100 px-8 fixed z-10 top-0 left-0">
       <div className="flex-1 gap-4">
         <a className="btn btn-ghost normal-case btn-circle text-xl" href="/">
           <img
