@@ -27,4 +27,4 @@ const Header = async () => {
   );
 };
 
-export default Header;
+export default Header as unknown as () => JSX.Element;
