@@ -1,5 +1,4 @@
-import { redirect } from 'next/navigation';
-import { getServerSession, NextAuthOptions } from 'next-auth';
+import { NextAuthOptions } from 'next-auth';
 import GithubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 
@@ -40,10 +39,4 @@ export const authConfig: NextAuthOptions = {
       return session;
     }
   }
-};
-
-export const loginIsRequiredServer = async () => {
-  const session = await getServerSession(authConfig);
-
-  if (!session) return redirect('/auth/login');
 };
