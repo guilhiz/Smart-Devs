@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const SignUp = async () => {
   return (
-    <section className="flex flex-col justify-center items-center h-screen">
+    <section className="flex flex-col justify-center items-center h-full">
       <h1 className="text-primary focus:text-primary-focus text-5xl font-bold mb-5">Cadastro</h1>
       <form className="form-control justify-center w-full max-w-md px-4 py-4">
         <label className="label">

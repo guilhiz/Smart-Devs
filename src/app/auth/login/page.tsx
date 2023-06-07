@@ -1,13 +1,10 @@
-'use client';
-
 import Link from 'next/link';
-import { signIn } from 'next-auth/react';
 
-import { GithubLogo, GoogleLogo } from '../../../components/Icons';
+import OAuthButtons from '../../../components/OauthButtons';
 
 const SignIn = () => {
   return (
-    <section className="flex flex-col justify-center items-center h-screen">
+    <section className="flex flex-col justify-center items-center h-full">
       <h1 className="text-primary focus:text-primary-focus text-5xl font-bold mb-5">Login</h1>
       <form className="form-control justify-center w-full max-w-md px-4 py-4">
         <label className="label">
@@ -33,14 +30,7 @@ const SignIn = () => {
         </Link>
       </p>
       <div className="divider">Ou continuar com</div>
-      <div className="flex w-full max-w-md justify-around">
-        <button onClick={() => signIn('github')} className="btn btn-neutral  w-5/12">
-          <GithubLogo size={22} color="#cccccc" /> Github
-        </button>
-        <button onClick={() => signIn('google')} className="btn btn-neutral w-5/12">
-          <GoogleLogo size={22} color="#cccccc" /> Google
-        </button>
-      </div>
+      <OAuthButtons />
     </section>
   );
 };
