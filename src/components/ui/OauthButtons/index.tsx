@@ -2,7 +2,7 @@
 
 import { signIn } from 'next-auth/react';
 
-import { GithubLogo, GoogleLogo } from '../Icons';
+import { GithubLogo, GoogleLogo } from '../../Icons';
 
 const OAuthButtons = () => {
   return (

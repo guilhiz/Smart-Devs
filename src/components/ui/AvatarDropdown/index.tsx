@@ -24,6 +24,11 @@ const AvatarDropdown = ({ userImage }: { userImage: null | undefined | string })
         <li>
           <a>Settings</a>
         </li>
+        {userImage && (
+          <li>
+            <a>Publish</a>
+          </li>
+        )}
         <li>
           {userImage && <p onClick={() => signOut()}>Logout</p>}
           {!userImage && <Link href="/auth/login">Login</Link>}
