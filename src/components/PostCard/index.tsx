@@ -1,17 +1,15 @@
-'use client';
-
-import { Bookmarks, SealCheck } from '@phosphor-icons/react';
+import { Bookmarks, SealCheck } from '../Icons';
 
 const PostCard = () => {
   return (
-    <div className="card card-compact w-full h-[7.8rem] bg-neutral text-neutral-content border-secondary border-b">
-      <div className="flex items-center gap-1 mt-2">
+    <div className="card card-compact w-full h-[7.8rem] bg-neutral text-neutral-content border-secondary border-b hover:bg-neutral-focus cursor-pointer">
+      <div className="flex items-center gap-1 mt-2 hover:text-info-content">
         <div className="avatar ml-4 cursor-pointer">
           <div className="w-7 rounded-full">
             <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/109693663/243429546-70592d7c-d1af-4a63-9e1b-49367c0f2c81.png" />
           </div>
         </div>
-        <p className="ml-1 hover:text-info-content cursor-pointer">ChickenJoe</p>
+        <p className="ml-1 cursor-pointer">ChickenJoe</p>
         <SealCheck size={18} color="#31A1D6" weight="bold" />
         <p className="text-secondary ml-2">mai 23, 2023</p>
       </div>

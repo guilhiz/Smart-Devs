@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`${barlow.className} bg-base-100 flex flex-col g antialiased`}>
         <Header />
-        <main className="grow min-h-screen xl:container">{children}</main>
+        <main className="grow min-h-screen xl:container mt-20">{children}</main>
       </body>
     </html>
   );

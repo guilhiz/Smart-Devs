@@ -2,7 +2,7 @@ import PostCard from '../components/PostCard';
 
 const Home = () => {
   return (
-    <section className="flex flex-col  h-full mt-20">
+    <section className="flex flex-col  h-full">
       <div className="tabs">
         <a className="tab tab-bordered">Trending</a>
         <a className="tab tab-bordered tab-active">Latest</a>

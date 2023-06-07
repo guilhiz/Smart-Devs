@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { GithubLogo, GoogleLogo } from '@phosphor-icons/react';
 import { signIn } from 'next-auth/react';
+
+import { GithubLogo, GoogleLogo } from '../../../components/Icons';
 
 const SignIn = () => {
   return (
