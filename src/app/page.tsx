@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import PostCard from '../components/PostCard';
 
 const Home = () => {
@@ -11,10 +9,8 @@ const Home = () => {
         <a className="tab tab-bordered">Best</a>
       </div>
       <div className="flex flex-col bg-neutral w-full mt-4 ">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(() => (
-          <Link href="posts/1">
-            <PostCard />
-          </Link>
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_p, i) => (
+          <PostCard key={i} />
         ))}
       </div>
 

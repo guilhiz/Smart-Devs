@@ -76,8 +76,11 @@ const Post = () => {
             <div className="h-16 bg-secondary-content text-info-content font-medium text-lg flex items-center justify-center border-b border-secondary">
               Recent Posts
             </div>
-            {[1, 2, 3, 4, 5, 6, 7, 8].map(() => (
-              <div className="min-h-16 text-neutral-content flex flex-col justify-center p-2 border-b border-secondary hover:bg-neutral-focus cursor-pointer">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((_a, i) => (
+              <div
+                key={i}
+                className="min-h-16 text-neutral-content flex flex-col justify-center p-2 border-b border-secondary hover:bg-neutral-focus cursor-pointer"
+              >
                 <p className="text-info-content text-sm">Sentinels part ways with dep</p>
                 <span className="text-secondary text-xs">ChickenJoe · 19h</span>
               </div>

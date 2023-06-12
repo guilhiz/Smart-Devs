@@ -34,6 +34,7 @@ export const authConfig: NextAuthOptions = {
         session.accessToken = token.accessToken;
         // @ts-ignore
         session.user.id = token.userId;
+        console.log(session);
       }
 
       return session;

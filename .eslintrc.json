@@ -1,7 +1,13 @@
 {
-  "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:prettier/recommended", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
   "overrides": [],
-  "plugins": ["react", "react-hooks", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
   "rules": {
     "react-hooks/exhaustive-deps": "warn",
     "@next/next/no-html-link-for-pages": "off",
@@ -9,6 +15,17 @@
     "react-hooks/rules-of-hooks": "off",
     "react/jsx-key": "off",
     "react/prop-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
     "prettier/prettier": "error"
   }
 }

@@ -1,10 +1,11 @@
 import Link from 'next/link';
 
 import { Bookmarks, SealCheck } from '../Icons';
+import CategoryButton from './CategoryButton';
 
 const PostCard = () => {
   return (
-    <div className="card card-compact w-full h-[7.8rem] bg-neutral text-neutral-content border-secondary border-b hover:bg-neutral-focus cursor-pointer">
+    <div className="card card-compact w-full h-[7.8rem] bg-neutral text-neutral-content border-secondary border-b">
       <div className="flex items-center gap-1 mt-2 hover:text-info-content">
         <div className="avatar ml-4 cursor-pointer">
           <div className="w-7 rounded-full">
@@ -16,15 +17,17 @@ const PostCard = () => {
         <p className="text-secondary ml-2 text-sm">mai 23, 2023</p>
       </div>
       <div className="card-body -mt-4">
-        <h2 className="card-title">Send Email from your React app with Nodemailer</h2>
-        <p className="-mt-4">
-          Sending email is one of the most demanded features in most applications. Here we will implement one ourselves.
-        </p>
+        <Link href="posts/1" className="cursor-pointer">
+          <h2 className="card-title">Send Email from your React app with Nodemailer</h2>
+          <p className="-mt-2">
+            Sending email is one of the most demanded features in most applications. Here we will implement one
+            ourselves.
+          </p>
+        </Link>
+
         <div className="card-actions">
-          {[1, 2, 3].map(() => (
-            <Link href="/categories/java">
-              <button className="btn btn-secondary h-[1.1rem] min-h-[1.1rem] btn-xs ">Java</button>
-            </Link>
+          {[1, 2, 3].map((_b, i) => (
+            <CategoryButton key={i} />
           ))}
         </div>
       </div>
