@@ -21,15 +21,11 @@ const PostCard = () => {
           Sending email is one of the most demanded features in most applications. Here we will implement one ourselves.
         </p>
         <div className="card-actions">
-          <Link href="/categories/java">
-            <button className="btn btn-secondary h-[1.1rem] min-h-[1.1rem] btn-xs ">Java</button>
-          </Link>
-          <Link href="/categories/java">
-            <button className="btn btn-secondary h-[1.1rem] min-h-[1.1rem] btn-xs ">Java</button>
-          </Link>
-          <Link href="/categories/java">
-            <button className="btn btn-secondary h-[1.1rem] min-h-[1.1rem] btn-xs ">Java</button>
-          </Link>
+          {[1, 2, 3].map(() => (
+            <Link href="/categories/java">
+              <button className="btn btn-secondary h-[1.1rem] min-h-[1.1rem] btn-xs ">Java</button>
+            </Link>
+          ))}
         </div>
       </div>
       <div className="flex gap-2 items-center absolute top-2 right-6 text-secondary text-sm">
