@@ -6,7 +6,7 @@ import { BookmarksSimple, CaretDown, CaretUp, House, SealCheck } from '../../../
 const Post = () => {
   return (
     <>
-      <section className="flex flex-col h-full  ">
+      <section className="flex flex-col h-full mt-4">
         <div className="text-sm breadcrumbs">
           <ul>
             <li>
@@ -16,7 +16,7 @@ const Post = () => {
               </Link>
             </li>
             <li>
-              <a>Java</a>
+              <Link href="/categories/java">Java</Link>
             </li>
             <li>Send Email from your React app with Nodemailer</li>
           </ul>
