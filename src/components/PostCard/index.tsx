@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { Bookmarks, SealCheck } from '../Icons';
 
 const PostCard = () => {
@@ -11,7 +13,7 @@ const PostCard = () => {
         </div>
         <p className="ml-1 cursor-pointer">ChickenJoe</p>
         <SealCheck size={18} color="#31A1D6" weight="bold" />
-        <p className="text-secondary ml-2">mai 23, 2023</p>
+        <p className="text-secondary ml-2 text-sm">mai 23, 2023</p>
       </div>
       <div className="card-body -mt-4">
         <h2 className="card-title">Send Email from your React app with Nodemailer</h2>
@@ -19,13 +21,19 @@ const PostCard = () => {
           Sending email is one of the most demanded features in most applications. Here we will implement one ourselves.
         </p>
         <div className="card-actions">
-          <div className="btn btn-secondary h-[1.1rem] min-h-[1.1rem] btn-xs ">Java</div>
-          <div className="btn btn-secondary h-[1.1rem] min-h-[1.1rem] btn-xs ">Java</div>
-          <div className="btn btn-secondary h-[1.1rem] min-h-[1.1rem] btn-xs ">Java</div>
+          <Link href="/categories/java">
+            <button className="btn btn-secondary h-[1.1rem] min-h-[1.1rem] btn-xs ">Java</button>
+          </Link>
+          <Link href="/categories/java">
+            <button className="btn btn-secondary h-[1.1rem] min-h-[1.1rem] btn-xs ">Java</button>
+          </Link>
+          <Link href="/categories/java">
+            <button className="btn btn-secondary h-[1.1rem] min-h-[1.1rem] btn-xs ">Java</button>
+          </Link>
         </div>
       </div>
-      <div className="flex gap-2 items-center absolute top-2 right-6 text-secondary">
-        14 min read
+      <div className="flex gap-2 items-center absolute top-2 right-6 text-secondary text-sm">
+        5 min read
         <Bookmarks className="cursor-pointer hover:opacity-60" size={20} color="#cccccc" />
       </div>
     </div>
