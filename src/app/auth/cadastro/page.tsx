@@ -1,7 +1,5 @@
 import Link from 'next/link';
 
-import Footer from '../../../components/Footer';
-
 const SignUp = async () => {
   return (
     <section className="flex flex-col justify-center items-center h-full">
@@ -36,7 +34,6 @@ const SignUp = async () => {
           Faça login aqui.
         </Link>
       </p>
-      <Footer />
     </section>
   );
 };

@@ -1,6 +1,9 @@
-import { NextAuthOptions } from 'next-auth';
+import { redirect } from 'next/navigation';
+import { getServerSession, NextAuthOptions } from 'next-auth';
 import GithubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
+
+import { registerUser } from '../service/authApi';
 
 export const authConfig: NextAuthOptions = {
   providers: [
@@ -33,11 +36,23 @@ export const authConfig: NextAuthOptions = {
         // @ts-ignore
         session.accessToken = token.accessToken;
         // @ts-ignore
-        session.user.id = token.userId;
-        console.log(session);
+        session.user.accountId = token.userId;
       }
+
+      if (session.user) {
+        const response = await registerUser(session.user);
+
+        // @ts-ignore
+        session.user.id = response.id;
+      }
+      console.log(session);
 
       return session;
     }
   }
+};
+
+export const loginIsRequired = () => {
+  const session = getServerSession(authConfig);
+  if (!session) return redirect('/auth/login');
 };

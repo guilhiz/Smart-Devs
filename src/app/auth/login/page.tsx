@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-import Footer from '../../../components/Footer';
 import OAuthButtons from '../../../components/ui/OauthButtons';
 
 const SignIn = () => {
@@ -32,7 +31,6 @@ const SignIn = () => {
       </p>
       <div className="divider">Ou continuar com</div>
       <OAuthButtons />
-      <Footer />
     </section>
   );
 };

@@ -18,12 +18,11 @@ const PostCard = () => {
       </div>
       <div className="card-body -mt-4">
         <Link href="posts/1" className="cursor-pointer">
-          <h2 className="card-title">Send Email from your React app with Nodemailer</h2>
-          <p className="-mt-2">
-            Sending email is one of the most demanded features in most applications. Here we will implement one
-            ourselves.
-          </p>
+          <h2 className="card-title hover:text-primary ">Send Email from your React app with Nodemailer</h2>
         </Link>
+        <p className="-mt-2">
+          Sending email is one of the most demanded features in most applications. Here we will implement one ourselves.
+        </p>
 
         <div className="card-actions">
           {[1, 2, 3].map((_b, i) => (
